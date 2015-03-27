@@ -1,3 +1,5 @@
+# Maintainer: Fabian Köhler <fabian2804 (AT) googlemail (DOT) com >
+
 pkgname=dieharder
 pkgver=3.31.1
 pkgrel=1
@@ -12,6 +14,7 @@ source=("http://www.phy.duke.edu/~rgb/General/dieharder/${pkgname}-${pkgver}.tgz
 sha256sums=('6cff0ff8394c553549ac7433359ccfc955fb26794260314620dfa5e4cd4b727f'
             '0df2d1957accfebba3e4083f7e1184aac10091c93f79a3174c79ebdae613831d'
             '1ea17f15580fa9ac8831d20a3e4f5c412b8330bf2183f704371e167206497714')
+provides=('dieharder')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
@@ -23,7 +26,8 @@ build() {
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
-  make install
+  make DESTDIR="$pkgdir/" install
+  install -D -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 }
 
 # vim:set ts=2 sw=2 et:

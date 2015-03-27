@@ -1,3 +1,4 @@
+# Maintainer: Fabian Köhler <fabian2804 (AT) googlemail (DOT) com>
 pkgname=testu01
 _pkgname=TestU01
 pkgver=1.2.3
@@ -7,8 +8,9 @@ arch=('i686' 'x86_64')
 url="http://simul.iro.umontreal.ca/testu01/tu01.html"
 license=('custom')
 depends=('glibc')
-source=('http://simul.iro.umontreal.ca/${pkgname}/${_pkgname.zip}')
+source=("http://simul.iro.umontreal.ca/${pkgname}/${_pkgname}.zip")
 md5sums=('0cbbe837f330d813ee258ef6bea2ac0e')
+provides=('testu01')
 
 build() {
   cd "${srcdir}/${_pkgname}-${pkgver}"
