@@ -1,5 +1,3 @@
-# Maintainer: Flaviu Tamas <tamas.flaviu@gmail.com>
-# Contributor: Guangyu Zhang <zguangyu123@gmail.com>
 pkgname=testu01
 _pkgname=TestU01
 pkgver=1.2.3
