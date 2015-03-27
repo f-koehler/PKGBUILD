@@ -1,0 +1,27 @@
+# Maintainer: Flaviu Tamas <tamas.flaviu@gmail.com>
+# Contributor: Guangyu Zhang <zguangyu123@gmail.com>
+pkgname=testu01
+_pkgname=TestU01
+pkgver=1.2.3
+pkgrel=2
+pkgdesc="A library offering a collection of utilities for the empirical statistical testing of uniform random number generators"
+arch=('i686' 'x86_64')
+url="http://simul.iro.umontreal.ca/testu01/tu01.html"
+license=('custom')
+depends=('glibc')
+source=(http://simul.iro.umontreal.ca/$pkgname/$_pkgname.zip)
+md5sums=('0cbbe837f330d813ee258ef6bea2ac0e')
+
+build() {
+  cd "$srcdir/$_pkgname-$pkgver"
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "$srcdir/$_pkgname-$pkgver"
+  make DESTDIR="$pkgdir/" install
+  install -D -m644 COPYING "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
+
+# vim:set ts=2 sw=2 et:
