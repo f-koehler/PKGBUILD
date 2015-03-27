@@ -2,7 +2,7 @@
 pkgname=testu01
 _pkgname=TestU01
 pkgver=1.2.3
-pkgrel=2
+pkgrel=3
 pkgdesc="A library offering a collection of utilities for the empirical statistical testing of uniform random number generators"
 arch=('i686' 'x86_64')
 url="http://simul.iro.umontreal.ca/testu01/tu01.html"

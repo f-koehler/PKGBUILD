@@ -2,7 +2,7 @@
 
 pkgname=dieharder
 pkgver=3.31.1
-pkgrel=1
+pkgrel=4
 pkgdesc="A Random Number Test Suite"
 arch=('i686' 'x86_64')
 depends=('gsl')
