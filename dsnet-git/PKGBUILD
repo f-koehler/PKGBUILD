@@ -1,4 +1,5 @@
 # Maintainer: Fabian Köhler <fabian.koehler@protonmail.ch>
+# Contributor: Fabian Köhler <fabian.koehler@protonmail.ch>
 
 pkgname=dsnet-git
 _pkgname=${pkgname%-git}
