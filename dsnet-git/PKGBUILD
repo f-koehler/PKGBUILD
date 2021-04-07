@@ -4,12 +4,13 @@
 pkgname=dsnet-git
 _pkgname=${pkgname%-git}
 pkgver=0.5.r33.ga5c5c7c
-pkgrel=1
+pkgrel=2
 pkgdesc="Simple command to manage a centralised wireguard VPN."
 arch=(x86_64)
 url="https://github.com/naggie/dsnet"
 license=(MIT)
 makedepends=("go" "git")
+depends=("glibc")
 provides=(${_pkgname})
 conflicts=(${_pkgname})
 source=("${pkgname}::git+https://github.com/naggie/dsnet")
@@ -29,7 +30,8 @@ build() {
     go build \
         -gcflags "all=-trimpath=${PWD}" \
 		-asmflags "all=-trimpath=${PWD}" \
-		-ldflags "-extldflags ${LDFLAGS}" \
+		-ldflags "-linkmode external -extldflags ${LDFLAGS}" \
+        -buildmode=pie \
         -o dsnet \
         ./cmd/dsnet.go
 }
