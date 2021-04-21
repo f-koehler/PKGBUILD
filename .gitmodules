@@ -4,3 +4,6 @@
 [submodule "dsnet-git/aur"]
 	path = dsnet-git/aur
 	url = ssh://aur@aur.archlinux.org/dsnet-git.git
+[submodule "xp-pen/aur"]
+	path = xp-pen/aur
+	url = ssh://aur@aur.archlinux.org/xp-pen.git
