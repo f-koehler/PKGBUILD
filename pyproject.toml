@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pkgbuild"
+version = "0.1.0"
+description = ""
+authors = ["Fabian Köhler <fabian.koehler@protonmail.ch>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+pre-commit = "^2.12.1"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.8.0"
+mypy = "^0.812"
+black = "^20.8b1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

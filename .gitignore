@@ -1,3 +1,5 @@
 *.pkg.tar.*
 pkg/
 src/
+poetry.lock
+.venv/
