@@ -1,0 +1,6 @@
+- id: check-for-updates
+  name: Check for Updates
+  description: Check for updated versions by comparing PKGBUILD with release-monitoring.org
+  entry: check-updates.py
+  language: python
+  files: ".pkgbuild-check"
