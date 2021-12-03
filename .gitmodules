@@ -7,3 +7,6 @@
 [submodule "xp-pen/aur"]
 	path = xp-pen/aur
 	url = ssh://aur@aur.archlinux.org/xp-pen.git
+[submodule "tiny-media-manager/aur"]
+	path = tiny-media-manager/aur
+	url = ssh://aur@aur.archlinux.org/tiny-media-manager.git
